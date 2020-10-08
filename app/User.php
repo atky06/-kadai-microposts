@@ -137,7 +137,7 @@ class User extends Authenticatable
         // このユーザのidもその配列に追加
         $userIds[] = $this->id;
         // それらのユーザが所有する投稿に絞り込む
-        return Micropost::whereIn('user_id', $userIds,);
+        return Micropost::whereIn('user_id', $userIds);
     }
     
     public function favorites()
